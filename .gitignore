@@ -8,7 +8,5 @@ __pycache__
 .claude
 CLAUDE.md
 
-build/.hash
-build/flutter
-build/site-packages
+build/
 *.sha1
