@@ -62,7 +62,6 @@ jobs:
           fi
           flet build linux \
             --verbose \
-            --icon assets/icon.png \
             --build-number=${{ github.run_number }} \
             --build-version="$VERSION"
 
@@ -108,7 +107,6 @@ jobs:
           fi
           flet build apk \
             --verbose \
-            --icon assets/icon.png \
             --build-number=${{ github.run_number }} \
             --build-version="$VERSION"
 
