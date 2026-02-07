@@ -2,11 +2,12 @@ import flet as ft
 
 
 async def main(page: ft.Page):
-    page.title = "FletBaseApp"
+    page.title = "tOdO"
     page.theme_mode = ft.ThemeMode.LIGHT
     page.padding = 30
-    page.window.width = 450
-    page.window.height = 600
+    if page.web or page.platform in (ft.PagePlatform.LINUX, ft.PagePlatform.WINDOWS, ft.PagePlatform.MACOS):
+        page.window.width = 450
+        page.window.height = 600
 
     # --- state ---
     tasks_column = ft.Column(spacing=8)
@@ -86,5 +87,4 @@ async def main(page: ft.Page):
     page.add(header, input_row, ft.Divider(), tasks_column)
 
 
-if __name__ == "__main__":
-    ft.run(main)
+ft.run(main)
