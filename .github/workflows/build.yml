@@ -88,7 +88,6 @@ jobs:
         with:
           distribution: temurin
           java-version: ${{ env.JAVA_VERSION }}
-          cache: gradle
 
       - uses: subosito/flutter-action@v2
         with:
